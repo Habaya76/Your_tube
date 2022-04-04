@@ -30,7 +30,11 @@ nav a {
     text-align: center;
     color: white;
 }
-
+.main_liste{
+        margin-top: 60px;
+        margin-bottom: 300px;
+ 
+}
 .contenuAdmin a{
     margin-right: 30px;
     text-decoration: none;
@@ -43,8 +47,12 @@ ul {
 }
 
 .main_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 50px;
     margin-bottom: 200px;
+    flex-wrap: wrap;
 }
 .main_box .box button{
     background-color: #920b0b;
@@ -78,6 +86,20 @@ ul {
     justify-content: center;
 
 }
+.box_liste{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+   margin-left: 30px;
+   
+
+}
+hr{
+    color: rgb(249, 245, 245);
+    margin-left: 30px;
+   
+}
+
 .music_classique{
     margin: 20px 20px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;

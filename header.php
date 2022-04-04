@@ -18,8 +18,7 @@ session_start();
     <nav>
         <ul>
             <li><a href="index.php">Acceuil</a></li>
-            <li><a href="liste_musics.php">Music</a></li>
-
+            <li><a href="liste_musics.php">Bibliothéques</a></li>
             <?php if (!empty($_SESSION['role'] && $_SESSION['role'] == 'user')) {
                 echo  '<li><a href="Loginout.php">Loginout</a></li>';
             } elseif (!empty($_SESSION['role'] && $_SESSION['role'] == 'Administrateur')) {

@@ -53,7 +53,7 @@ if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] == 0) {
 
 <main class="main_register">
     <div class="contenuAdmin">
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" >
             <label for="titre">Titre</label>
             <input name="titre" type="text" value="<?php echo $titre; ?>" placeholder="entre le titre de l'article">
             <p class="error"><?php echo $titreError; ?></p>
@@ -68,7 +68,7 @@ if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] == 0) {
                 <?php
                 for ($i = 0; $i < count($resultat); $i++) :
                 ?>
-                    <option value="<?php echo $resultat[$i]['idcategorie'] ?>"><?php echo $resultat[$i]['categorie'] ?></option>
+                    <option value="<?php echo $resultat[$i]['idcategorie'];?>"><?php echo $resultat[$i]['categorie'];?></option>
                 <?php endfor; ?>
             </select>
             <button class="button">Creer</button>

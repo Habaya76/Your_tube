@@ -1,38 +1,27 @@
 <?php
-require('header.php');
-
-$req = $db->prepare('SELECT * FROM article');
-        $req->execute();
-        $resultats = $req->fetchAll();
-        var_dump($resultats);
-
+include_once('header.php');
+$resultats = $db->query('SELECT * From article', PDO::FETCH_ASSOC);
 ?>
-<main class="main_listerecettes">
-    <div class="info_article">
-        <?php
-        while ($row = $resultats->fetch()) :
-        ?>
-            <img src="./images/<?php echo $row['image']; ?>">
+<div class="main_liste">
 
-            <ul class="info">
-                <li><i class="fa-solid fa-user"></i> Habaya</li>
-                <li>Le 22/03/2022</li>
-                <li>Plat</li>
-            </ul>
-            <p>
+    <?php
+    while ($row = $resultats->fetch()) :
+    ?>
+        <div class="box_liste">
 
-                nisi rerum eos quaerat?<?php
-                  echo $row['image'];
-                                        ?>
-         </p>
-
-            <button type="submit" action="voir" class="button_liste"><a class="voir" href="music.php?idarticle=<?php echo $row['idarticle']; ?> ">Voir plus</a></button>
-            <hr>
-            <i class="fa-solid fa-message"></i>
-
-
-    </div>
-
+            <div class="liste">
+            </div>
+            <a href="https://www.youtube.com/"> <img src="images/<?php echo $row['image']; ?>" width='30' height="30"></a>
+            <?php
+            echo $row['titre'];
+            ?>
+            </p>
+        </div>
+        <hr>
+    <?php
+    endwhile;
+    ?>
+</div>
 
 </main>
 <?php
