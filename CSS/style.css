@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (max-width:550px) {
+    body {
+        width: 90%;
+    }
+}
+h1, h2{
+    color: #920b0b;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    gap: 60px;
+    text-transform: uppercase;
+    background-color: #920b0b;
+    height: 40px;
+    width: 100%;
+
+}
+
+nav a {
+    margin-right: 30px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.contenuAdmin a{
+    margin-right: 30px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+ul {
+
+    list-style: none;
+}
+
+.main_box {
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.main_box .box button{
+    background-color: #920b0b;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    margin: 4px 2px;
+    color: white;
+    border-radius: 5px;
+  margin-right: 50px;
+}
+.box h2{
+    color: #db3d3d;
+}
+.merci{
+    color: green;
+}
+.video_index {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin: 20px 20px;
+    
+}
+.box {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.music_classique{
+    margin: 20px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.music_hip_hop{
+    margin: 20px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.music_rb{
+    margin: 20px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.music_rap{
+    margin: 20px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.music_rock{
+    margin: 20px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.music_jazz{
+    margin: 20px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* Resgister */
+.main_register {
+    margin-top: 50px;
+    margin-bottom: 300px;
+  }
+  
+  #container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #920b0b;;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #920b0b;
+    border: 1px solid #920b0b;
+}
+/* administrateur */
+.contenuAdmin {
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+.contenuAdmin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 50%;
+    margin: auto;
+  }
+  
+
+  table {
+    
+    margin-top: 30px;
+    border-collapse: collapse;
+  }
+  
+  td {
+    
+    border: 1px solid  #C0C0C0;;
+    padding: 10px;
+  }
+.contenuAdmin .button {
+    background-color: #920b0b;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #modifier{
+      width: 20%;
+      border-radius: 10px;
+     
+  }
