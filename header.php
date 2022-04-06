@@ -10,7 +10,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Your_tube</title>
     <script src="https://kit.fontawesome.com/f00c55aea5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
@@ -18,19 +18,26 @@ session_start();
     <nav>
         <ul>
             <li><a href="index.php">Acceuil</a></li>
+
             <li><a href="liste_musics.php">Bibliothéques</a></li>
-            <?php if (!empty($_SESSION['role'] && $_SESSION['role'] == 'user')) {
-                echo  '<li><a href="Loginout.php">Loginout</a></li>';
-            } elseif (!empty($_SESSION['role'] && $_SESSION['role'] == 'Administrateur')) {
-                echo  ' <li><a href="Administrateur.php">Administrateur</a></li>';
-                echo  '<li><a href="Loginout.php">Loginout</a></li>';
-            } elseif (!isset($_SESSION['role'])) {
+            <li><a href="contact.php">Contact</a></li>
+
+            <?php
+            if (isset($_SESSION['role'])) {
+                if ($_SESSION['role'] == 'user') {
+                    echo  '<li><a href="Logout.php">Logout</a></li>';
+                } elseif ($_SESSION['role'] == 'Administrateur') {
+                    echo  ' <li><a href="Administrateur.php">Administrateur</a></li>';
+                    echo  '<li><a href="Logout.php">Logout</a></li>';
+                    echo '<li><a href="modif_user.php">Update_user</a></li>';
+                }
+            } else {
                 echo '<li><a href="login.php">Login</a></li>';
             }
-
             ?>
         </ul>
     </nav>
 
 </header>
 
+<body>

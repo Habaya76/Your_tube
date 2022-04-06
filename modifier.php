@@ -11,19 +11,15 @@ $recupere = $recup->fetch();
 
 // Réecriture des variables
 if (isset($_POST['modifier'])) {
-
     // Réecriture des variables
     $idarticle = $_GET['idarticle'];
     $titre = $_POST['titre'];
     $image = $_POST['image'];
     $dateup = $date->format('Y-m-d H:m:s');
-
-
     // Requête de modification d'enregistrement
-    $Modifierarticle = $db->prepare("UPDATE article SET titre = '$titre', image = '$image', date = '$dateup' WHERE idarticle = $idarticle");
+    $Modifierarticle = $db->prepare("UPDATE article SET titre = '$titre', image = '$image',  date = '$dateup' WHERE idarticle = $idarticle");
     $Modifierarticle->execute();
 } // Fin du test isset
-
 
 ?>
 <main class="main_register">

@@ -1,6 +1,10 @@
 <?php
 include_once('header.php');
 include_once('fonction.php');
+
+$pwdh = ['cost '=> 14];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+     
 $nom = $prenom = $pseudo = $password = $email = "";
 $nomError = $prenomError = $pseudoError = $passwordError = $emailError = $roleError = "";
 $isValid = false;

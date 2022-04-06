@@ -3,18 +3,18 @@ include_once('header.php');
 $resultats = $db->query('SELECT * From article', PDO::FETCH_ASSOC);
 ?>
 <div class="video_index">
-        <video width="820" height="540" controls>
-            <source src="./images/video2.mp4" type="video/mp4">
-            <source src="./images/video2.mp4" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    
+    <video width="820" height="540" controls>
+        <source src="./images/video2.mp4" type="video/mp4">
+        <source src="./images/video2.mp4" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
 <div class="main_box">
-    
+
     <?php
     while ($row = $resultats->fetch()) :
-       
+
     ?>
         <div class="box">
 
@@ -28,6 +28,7 @@ $resultats = $db->query('SELECT * From article', PDO::FETCH_ASSOC);
                 <a href="https://www.youtube.com/"><button>Ecouter</button></a>
             </div>
         </div>
+        
     <?php
     endwhile;
     ?>

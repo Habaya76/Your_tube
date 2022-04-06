@@ -60,8 +60,7 @@ if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] == 0) {
 
             <label for="content">Image</label>
             <input name="image" type="text" value="<?php echo $image; ?>">
-            <p class="error"><?php echo $imageError; ?></p>
-
+           
             <label for="categorie">Categorie</label>
 
             <select name="idcategorie">

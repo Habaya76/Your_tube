@@ -1,5 +1,5 @@
 <?php
-require('header.php');
+require_once('header.php');
 $resultats = $db->query('SELECT * FROM `article` INNER JOIN categorie On categorie.idcategorie = article.idcategorie ', PDO::FETCH_ASSOC);
 $resu = $resultats->fetchAll();
 
@@ -31,7 +31,7 @@ $resu = $resultats->fetchAll();
           <td>
 
             <button action="ModiferArticle" class="button"><a class="ajou" href="modifier.php?idarticle=<?php echo $resu[$i]['idarticle']; ?>">Modifier</a></button>
-            <button action="SupprimerArticle" class="button"><a class="ajou" href="suprime.php">Suprimer</a></button>
+            <button action="Supprime" class="button" name="suprimer" value="<?php echo $resu[$i]['idarticle'];?>"><a class="ajou" href="#">Suprimer</a></button>
 
           </td>
         </tr>
